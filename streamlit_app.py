@@ -1,4 +1,4 @@
-import streamlit
+import streamlit as st
 
-streamlit.title('My Parents New Healthy Diner')
+st.title('My Parents New Healthy Diner')
 st.markdown("# Page 2 ❄️")
