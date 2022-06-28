@@ -22,7 +22,7 @@ st.dataframe(fruits_to_show)
 
 #New section to display fruityvice api response
 st.header('Fruityvice Fruit Advice!')
-fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon" + "kiwi")
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon" + "Kiwi")
 
 #take the json version of the response and normalize it
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
