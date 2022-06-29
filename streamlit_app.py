@@ -42,5 +42,4 @@ st.dataframe(my_data_row)
 
 st.header('What fruit would you like to add?')
 add_my_fruit = st.text_input('Input fruit')
-x = my_cur.execute(f"select * from fruit_load_list where fruit_name = '{add_my_fruit}'")
-st.dataframe(x)
+y = my_cur.execute(f"insert into fruit_load_list values('{add_my_fruit}')")
