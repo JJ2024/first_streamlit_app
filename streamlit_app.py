@@ -1,6 +1,6 @@
 import streamlit as st
-#import pandas as pd
-#import requests as rq
+import pandas as pd
+import requests as rq
 
 st.stop()
 
@@ -15,7 +15,7 @@ st.text("🥗 Kale, Spinach & Rocket Smoothie")
 st.text("🐔 Hard-Boiled Free-Range Egg")
 st.text("🥑🍞 Hard-Boiled Free-Range Egg")
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-###
+
 my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
@@ -37,7 +37,6 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 
 #output it to the screen as a table
 st.dataframe(fruityvice_normalized)
-###
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
