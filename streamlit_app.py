@@ -52,6 +52,4 @@ if st.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
     st.dataframe(my_data_rows)
 
-st.header('What fruit would you like to add?')
-add_my_fruit = st.text_input('Input fruit')
-y = my_cur.execute(f"insert into fruit_load_list values('{add_my_fruit}')")
+
