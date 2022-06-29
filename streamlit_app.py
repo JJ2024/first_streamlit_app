@@ -1,10 +1,13 @@
 import streamlit as st
 import pandas as pd
 import requests as rq
+
+st.stop()
+
 import snowflake.connector
 from urllib.error import URLError
 
-st.stop()
+
 
 st.title('My Parents New Healthy Diner')
 st.text("🥣 Omega 3 & Blueberry Oatmeal")
