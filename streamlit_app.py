@@ -41,4 +41,4 @@ st.header("The fruit list contains:")
 st.dataframe(my_data_row)
 
 st.header('What fruit would you like to add?')
-
+add_my_fruit = st.text_input('Input fruit')
