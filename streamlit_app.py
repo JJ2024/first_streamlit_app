@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
 import requests as rq
-
-st.stop()
-
 import snowflake.connector
 from urllib.error import URLError
 
@@ -41,6 +38,8 @@ try:
 except URLError as e:
   st.error()
 
+st.stop()
+  
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
