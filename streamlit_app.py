@@ -39,3 +39,6 @@ my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchone()
 st.header("The fruit list contains:")
 st.dataframe(my_data_row)
+
+st.header('What fruit would you like to add?')
+
