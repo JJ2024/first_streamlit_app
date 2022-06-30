@@ -52,7 +52,6 @@ if st.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
     st.dataframe(my_data_rows)
 
-
 #Add values to the table
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
