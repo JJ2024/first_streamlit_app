@@ -63,7 +63,7 @@ if st.button('Add Value'):
     my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
     insert_row_snowflake(add_fruit)
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 my_data_row = my_cur.fetchone()
