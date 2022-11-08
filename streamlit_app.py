@@ -62,3 +62,10 @@ add_fruit = st.text_input('What fruit would you like to add?')
 if st.button('Add Value'):
     my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
     insert_row_snowflake(add_fruit)
+
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
+my_cur = my_cnx.cursor()
+my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+my_data_row = my_cur.fetchone()
+streamlit.text("Hello from Snowflake:")
+streamlit.text(my_data_row)
